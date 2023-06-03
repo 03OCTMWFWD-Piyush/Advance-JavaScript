@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document  (25/4/2023)</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // inheritance in javascript :-
+        
+        // class, Object, constructor 
+
+        // inheritance - single lavel - parent class (super class)
+                        // ->child class (sub class)
+
+        // class Animal {
+        //     constructor ()
+        //     {
+        //         console.log("This is parent constructor:");
+        //     }
+        // } 
+
+        // class Dog extends Animal {
+        //     display ()
+        //     {
+        //         console.log("This is child class");
+        //     }
+        // }
+
+        // const obj = new Dog ();
+        // obj.display();  
+
+        // class Animal{
+        //     sound () 
+        //     {
+        //         console.log("Every Animal has different sound");
+        //     }
+        //     sleep ()
+        //     {
+        //         console.log("Every Animal Sleeps");
+        //     }
+        // }   
+
+        // class Dog extends Animal {
+        //     speak ()
+        //     {
+        //         console.log("Dog Banks")
+        //     }
+        //     eat ()
+        //     {
+        //         console.log("pet Dogs are playing");
+        //     }
+        // }
+
+        // class petDog extends Dog {
+        //     play ()
+        //     {
+        //         console.log("pet Dogs are playing ");
+        //     }
+        // } 
+
+        // const obj = new petDog();
+        // obj.eat();
+        // obj.sleep();
+        // obj.play();
+        // obj.sound();
+        // obj.speak();
+
+
+        class shape{
+            constructor(name)
+            {
+                this.name=name;
+                console.log(name);
+            }
+        }
+
+        class Rectangle extends shape{ 
+            constructor(name,index)   
+            {
+                super(name);
+                this.index=index;
+            }
+            display() 
+            {
+                console.log(`Welcome ${this.name} your index is ${this.index}`);
+            } 
+        }
+
+            const obj =new Rectangle("Ram",1); 
+            obj.display();
+            // const ob =new shape();   
+
+
+        
+
+    </script>
+</body>
+</html>

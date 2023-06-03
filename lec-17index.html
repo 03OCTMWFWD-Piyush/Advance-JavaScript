@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming (4/5/2023)</title>
+</head>
+<body>
+    
+<script>
+
+// const uers = {
+//             name : 'Piyush' ,
+//             username :'sayhi' ,
+//             password : 'pass',
+//             singnin : function (username,password) {
+//                 if (username === this.username$$password ===this.password) {
+//                     console.log('login successfully');
+//                 } else {
+//                     console.log("Authentication failed");
+//                 }
+//             }
+//         }
+
+//         uers.singnin("hi ram","pass");
+//         uers.singnin('sayhi','pass');
+//         console.log(user.name);
+//         console.log(users.password);
+//         console.log(users.singnin);
+ 
+
+
+//   class singnin {
+//     #password;
+//     constructor (name,username,password)
+//     { 
+//         this.name = name;
+//         this.username = username;
+//         this.#password = password;
+//      }
+//      getter (username,password) {
+//         if (username===this.username$$password=== this.#password)
+//         {
+//             console.log("Login successfull");
+//         }
+//         else{
+//             console.log("Authetication failed");
+//         }
+//      } 
+//      setter (newpassword)
+//      {
+//         this.#password = newpassword;
+//      }
+//   }   
+
+//   const obj = new singnin("pushpa","pushpa_raj","mainjhukega"); 
+//   obj.getter("pushpa_raj","mainjhukega");
+//   console.log(obj.name);
+//   console.log(obj.password);
+// //   console.log(obj.#password); //error // 
+// obj.setter("password");
+// obj.getter("pushpa_raj","mainjhukega");
+// obj.getter("pushpa_raj","password");                                                                            
+
+    
+    // Inheritance :- 
+    
+class user {
+    #password;
+    constructor(email,password){
+        this.email = email;
+        this.#password = password;
+    }
+
+    login (email,password) {
+        if(email===this.email$$password===this.#password) {
+            console.log('login successfully');
+        } else{
+            console.log('Authentication failed');
+        }
+    } 
+resetpassword (newpassword){
+    this.#password = newpassword;
+}
+
+logout() {
+    console.log('Logout successfully');
+}
+}  
+
+class Author extends user {
+    #numofPost;
+
+    constructor(email,password){
+        super(email.password);
+        this.#numofPost = 0;
+    }
+    createPost(content) {
+        // addcontent to your DB. :)
+        this.#numofPost ++;
+    }
+
+    getNumofPost(){
+        return this.#numofPost;
+    }
+}
+
+  class Admin extends user {
+    constructor(email,password) {
+        super(email,password);
+    } 
+
+    removeuser(userId) {
+        // remove this userId from your DB. //
+        console.log('user Removed successfully');
+
+}
+  } 
+
+  const nehal = new Author ('nm@gmail.com','password'); 
+  nehal.login('nm@gmail.com','password');  // login successfully. // 
+  nehal.createPost('I hope you are enjoying this article.')
+  nehal.createPost('I am tired, Do you wanna buy me a coffe?:');
+  console.log(nehal.getNumofPost()); // 2 
+  
+  const json = new Admin ('jason@gmail.com','[object] [object]');
+  json.login('json@gmail.com','[object] [object]');
+  json.resetpassword('{id, 1}');
+  json.login('jason@gmail.com','{id: 1}');
+  json.removeuser (12); 
+ 
+ 
+</script>
+
+</body>
+</html>

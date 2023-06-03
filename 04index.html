@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model </title>
+</head>
+
+<body>
+
+    <ul id="item">
+
+    </ul>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    function createitem(name) {
+        let li = document.createElement('li');
+        li.textContent = name;
+        return li;
+
+    }
+
+    const item = document.querySelector('#item');
+    item.appendChild(createitem('Home'));
+    item.appendChild(createitem('services'));
+    item.appendChild(createitem('About Us'));
+
+
+
+</script>
