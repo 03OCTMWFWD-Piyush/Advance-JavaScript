@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Javascript (14/6/23)</title>
+</head>
+<body>
+    <script>
+
+        /*
+
+        Data Types 
+        objects : 
+        string :
+        array :  
+        function :    
+        Higher order function 
+
+        
+        {} -> object literel 
+        [] -> Array Create
+        () -> function create 
+
+        variable : let,var,const
+        function 
+        operator : Relational operator, Logical && // !
+        Decison Control Structure : if if else if else if else 
+
+        */ 
+
+        const user ={
+            name : 'Divyesh',
+            userName : "Divyesh_react",      
+            password : '123456',   
+            login : function (username,password){   
+                if (username === this.userName && password === this.password) {
+                    console.log("login successfully");         
+                }
+                else{
+                    console.log("Authentication failed");      
+                }
+            }
+        }
+         user.login("shilen","password"); 
+         user.login("Divyesh_react",'123456');
+
+        //  => Higher Order Function :
+
+       // Map filter and reduce // array
+
+        const obj = new Map(); 
+        console.log(obj); 
+
+        let res = obj.set ([1,2,3]);
+        console.log(res); 
+
+        
+</script>
+</body>
+</html>
