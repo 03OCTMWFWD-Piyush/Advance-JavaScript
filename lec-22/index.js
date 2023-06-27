@@ -10,7 +10,7 @@ Run Time Polymorphism :- Mothod overriding
 
 */
 
-class user{
+class User{
     name ;
     email ;   
     #password;
@@ -24,9 +24,9 @@ class user{
         return true;
     }
     signup (name,email,password){
-        let isvalidate = flase;
+        let isvalidate = false;
         isvalidate &&=this.#validateEmail(email);  
-        isvalidate &&=this.#validatepassword(password);
+        isvalidate =this.#validatepassword(password);
         if(isvalidate){
             this.name=name;
             this.email=email;
@@ -56,13 +56,13 @@ class user{
     }
 } 
 
-constuser = new user ();
+const user = new User ();
 user.signup("viren",'viren@gmail.com','123456');
 // user.#validateEmail("viren@gmail.com");
-// user.login("viren@outlook.com",'123456');
+// user.login("viren@gmail.com",'123456');
 // user.login("viren@gmail.com",'123456'); 
 // user.resetpassword("viren@gmail.com","viren"); 
-// user.login("viren@gmail.com",'123456');
+user.login("viren@gmail.com",'123456');
 // user.reSetpassword("viren@outlook.com","viren");    
 
 
